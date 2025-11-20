@@ -1,0 +1,69 @@
+$orangeColor: orange;
+$textColor: black;
+
+@mixin flexContainer {
+  display: flex;
+  align-items: center;
+}
+
+@mixin gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+@mixin clickableElement {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $orangeColor;
+    opacity: 0.8;
+  }
+}
+
+@mixin clickableElementButton {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+main {
+  margin: 20px auto;
+  width: 1500px;
+  h1 {
+    color: $orangeColor;
+    @include clickableElement;
+  }
+  .section {
+    @include gridContainer;
+    .gridCart {
+      width: 352px;
+      height: 457px;
+      justify-content: center;
+      img {
+        width: 300px;
+        cursor: pointer;
+        border-radius: 30px;
+      }
+      h2 {
+        cursor: pointer;
+      }
+      p {
+        margin-top: 20px;
+        @include clickableElement;
+      }
+      button {
+        margin-left: 100px;
+        width: 200px;
+        height: 50px;
+        border-radius: 20px;
+        background-color: $orangeColor;
+        color: white;
+        border: 1px solid white;
+        @include clickableElementButton;
+      }
+    }
+  }
+}

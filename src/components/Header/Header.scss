@@ -1,0 +1,56 @@
+$orangeColor: orange;
+$textColor: black;
+$headerWidth: 1500px;
+$headerHeight: 90px;
+
+@mixin flexContainer {
+  display: flex;
+  align-items: center;
+}
+
+@mixin gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 130px;
+  gap: 20px;
+}
+
+@mixin clickableElement {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $orangeColor;
+    opacity: 0.8;
+  }
+}
+header {
+  margin: 0 auto;
+  width: $headerWidth;
+  height: $headerHeight;
+  @include flexContainer;
+  border-bottom: 3px solid $orangeColor;
+  .logo {
+    width: 100px;
+    height: 75px;
+  }
+  h1 {
+    color: $orangeColor;
+    @include clickableElement;
+  }
+  nav {
+    padding-left: 300px;
+    gap: 50px;
+    @include flexContainer;
+    p {
+      color: $textColor;
+      @include clickableElement;
+    }
+  }
+  .grid {
+    margin-left: 220px;
+    @include gridContainer;
+    line-height: 10px;
+    p {
+      @include clickableElement;
+    }
+  }
+}

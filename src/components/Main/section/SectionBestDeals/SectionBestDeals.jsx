@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../button/button.jsx";
 import barbequ from "./sectionImages/pizza-barbeku_jpg.png";
 import setPutSamuraya from "./sectionImages/set-put samuraya_jpg.png";
 import pizzaMnogoSira from "./sectionImages/pizza-mnogo sira_jpg.png";
@@ -33,7 +34,7 @@ const array = [
     cost: "319₽",
   },
 ];
-export default function SectionBestDeals() {
+export default function SectionCombo() {
   return (
     <section className="section">
       {array.map((cart) => (
@@ -42,7 +43,7 @@ export default function SectionBestDeals() {
           <h2>{cart.name}</h2>
           <p>{cart.mass}</p>
           <p>{cart.cost}</p>
-          <button>В корзину</button>
+          <Button>В корзину</Button>
         </div>
       ))}
     </section>

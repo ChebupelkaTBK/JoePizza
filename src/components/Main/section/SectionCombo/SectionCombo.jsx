@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../button/button.jsx";
 import SalmonGame from "./sectionImages/Salmon game.webp";
 import MuzKupil from "./sectionImages/muz kupil_jpg.webp";
 import RolloniniLosasini from "./sectionImages/rollalini lososini_jpg.webp";
@@ -42,7 +43,7 @@ export default function SectionCombo() {
           <h2>{cart.name}</h2>
           <p>{cart.mass}</p>
           <p>{cart.cost}</p>
-          <button>В корзину</button>
+          <Button>В корзину</Button>
         </div>
       ))}
     </section>

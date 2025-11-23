@@ -43,7 +43,7 @@ export default function SectionCombo() {
           <h2>{cart.name}</h2>
           <p>{cart.mass}</p>
           <p>{cart.cost}</p>
-          <Button>В корзину</Button>
+          <Button></Button>
         </div>
       ))}
     </section>
